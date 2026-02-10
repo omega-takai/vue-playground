@@ -1,11 +1,28 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <router-view />
 </template>
 
-<style scoped></style>
+<style>
+/* Google Fontsから Noto Sans JP を読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap');
+
+/* グローバルスタイルのリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #ffffff;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+#app {
+  min-height: 100vh;
+}
+</style>
