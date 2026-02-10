@@ -1,0 +1,29 @@
+[tools]
+node = "24"
+pnpm = "10"
+
+[tasks.mise-install]
+run = "mise install"
+
+[tasks.install]
+run = "pnpm install"
+
+[tasks.clean-node-modules]
+description = "node_modulesを削除"
+run = "node -e \"fs.promises.rm('node_modules', {recursive: true, force: true})\""
+
+[tasks.type-check]
+description = "TypeScript型チェック"
+run = "pnpm run type-check"
+
+[tasks.dev]
+run = "pnpm run dev"
+
+[tasks.build]
+run = "pnpm run build"
+
+[tasks.test]
+run = "pnpm run test"
+
+[tasks.lint]
+run = "pnpm run lint"
